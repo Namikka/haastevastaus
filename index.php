@@ -1,0 +1,3 @@
+<?php
+echo "Ei täällä mitään ole.";
+?>
