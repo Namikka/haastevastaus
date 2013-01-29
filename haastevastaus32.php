@@ -1,9 +1,9 @@
 <?php
-###
-# Ohjelmointiputkan PHP-haasteen 32. tehtävän vastaus.
-# Tuhertanut: Kare Salo
-###
-# Jos ton $kirjaimet lukujonon key-arvoja vertais kirjainjoukkoon, kattois et onko n ja n+1 $kirjaimet-lukujonon key-arvon ero >1
+//////
+// Ohjelmointiputkan PHP-haasteen 32. tehtävän vastaus.
+// Tuhertanut: Kare Salo
+//////
+// Jos ton $kirjaimet lukujonon key-arvoja vertais kirjainjoukkoon, kattois et onko n ja n+1 $kirjaimet-lukujonon key-arvon ero >1
 // Käytössä ovat kirjaimet A–Z, ja kirjainjoukossa on enintään sata kirjainta.
 $kirjaimet = str_split("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 1);
 // array_flip-funktiolla saadaan kivasti arvot ja avaimet vaihdettua.

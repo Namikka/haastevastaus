@@ -1,10 +1,10 @@
 <?php
-###
-# Ohjelmointiputkan PHP-haasteen 8. tehtävän vastaus.
-# Tuhertanut: Kare Salo
-# Jaetaan sana ensin lukujonoksi.
+//////
+// Ohjelmointiputkan PHP-haasteen 8. tehtävän vastaus.
+// Tuhertanut: Kare Salo
+// Jaetaan sana ensin lukujonoksi.
 $sana = str_split($_REQUEST['sana']);
-# Koska en löytänyt mitään kivaa funktiota, joudun tekemään lukujonoja.
+// Koska en löytänyt mitään kivaa funktiota, joudun tekemään lukujonoja.
 
 $vokaalit = array("a","e","i","o","u","y", "A","E","I","O","U","Y");
 $kokosana = count($sana);

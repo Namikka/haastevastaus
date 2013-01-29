@@ -1,47 +1,47 @@
 <?php
-###
-# Ohjelmointiputkan PHP-haasteen 15. tehtävän vastaus.
-# Tuhertanut: Kare Salo
-###
-#Toteuta äänestyskone neljälle äänestäjälle. Yksi äänestäjistä on puheenjohtaja, jonka ääni ratkaisee, mikäli äänet menevät tasan. 
-#Esimerkki 1: Puheenjohtaja äänestää asian puolesta ja muut äänestävät asiaa vastaan. Äänestystulos on asiaa vastaan, koska kolme
-#henkilöä äänestää asiaa vastaan ja vain yksi sen puolesta. 
-##
-#Esimerkki 2: Puheenjohtaja ja 2. äänestäjä äänestävät asian puolesta ja 1. äänestäjä ja 3. äänestäjä äänestävät asiaa vastaan.
-#Äänestystulos on asian puolesta, koska äänet menevät tasan ja puheenjohtaja äänestää asian puolesta. 
-##
-#Syötteessä numero 1 tarkoittaa asian puolesta ja numero 0 asiaa vastaan.
+//////
+// Ohjelmointiputkan PHP-haasteen 15. tehtävän vastaus.
+// Tuhertanut: Kare Salo
+//////
+//Toteuta äänestyskone neljälle äänestäjälle. Yksi äänestäjistä on puheenjohtaja, jonka ääni ratkaisee, mikäli äänet menevät tasan. 
+//Esimerkki 1: Puheenjohtaja äänestää asian puolesta ja muut äänestävät asiaa vastaan. Äänestystulos on asiaa vastaan, koska kolme
+//henkilöä äänestää asiaa vastaan ja vain yksi sen puolesta. 
+////
+//Esimerkki 2: Puheenjohtaja ja 2. äänestäjä äänestävät asian puolesta ja 1. äänestäjä ja 3. äänestäjä äänestävät asiaa vastaan.
+//Äänestystulos on asian puolesta, koska äänet menevät tasan ja puheenjohtaja äänestää asian puolesta. 
+////
+//Syötteessä numero 1 tarkoittaa asian puolesta ja numero 0 asiaa vastaan.
 
-#Ihmisten puolueesta muuttujien nimet.
+//Ihmisten puolueesta muuttujien nimet.
 $Tapsa = $_REQUEST['pj'];
 $Topi_Petteri = $_REQUEST['a'];
 $Hannes = $_REQUEST['b'];
 $Regina = $_REQUEST['c'];
 
-#Tai tehdään niistä sittenkin lukujono
+//Tai tehdään niistä sittenkin lukujono
 $puolue = array($Tapsa, $Topi_Petteri, $Hannes, $Regina);
 
-#alustetaan tulos-muuttuja
+//alustetaan tulos-muuttuja
 $tulos = 0;
 
-#Lasketaan äänet
+//Lasketaan äänet
 foreach($puolue as $vote)
 {
 $tulos = $tulos + $vote;
 }
 
-#Jos puheenjohtajan äänestää puolesta, ja äänet menevät tasan, Tapsan ääni ratkaisee voiton, ja tulostetaan 1
+//Jos puheenjohtajan äänestää puolesta, ja äänet menevät tasan, Tapsan ääni ratkaisee voiton, ja tulostetaan 1
 if($Tapsa == 1 && $tulos == 2)
 {
 echo "1";
 }
-#Jos enemmän kuin kaksi on äänestänyt puolesta, demokratia voittaa ja tulostetaan 1
+//Jos enemmän kuin kaksi on äänestänyt puolesta, demokratia voittaa ja tulostetaan 1
 elseif($tulos > 2)
 {
 echo "1";
 }
 else
-#Jos enemmän kuin kaksi on äänestänyt vastaan, tai puheenjohtaja on äänestänyt vastaan kun äänet menee tasan
-#hylätään ehdotus ja tulostetaan 0
+//Jos enemmän kuin kaksi on äänestänyt vastaan, tai puheenjohtaja on äänestänyt vastaan kun äänet menee tasan
+//hylätään ehdotus ja tulostetaan 0
 echo "0";
 ?>

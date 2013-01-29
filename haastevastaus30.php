@@ -1,8 +1,8 @@
 <?php
-###
-# Ohjelmointiputkan PHP-haasteen 29. tehtävän vastaus.
-# Tuhertanut: Kare Salo
-###
+//////
+// Ohjelmointiputkan PHP-haasteen 29. tehtävän vastaus.
+// Tuhertanut: Kare Salo
+//////
 // Tarkastellaan seuraavaa algoritmia:
 
 // A. Valitaan jokin kokonaisluku n.
@@ -14,28 +14,28 @@
 /////
 // Skriptin täytyy tulostaa algoritmin vaiheen B suorituskertojen määrä.
 
-# Alustetaan B-vaiheen laskuri
+// Alustetaan B-vaiheen laskuri
 $i = 0;
 
-# Pyöritetään silmukkaa kunnes luku on 1
-# Otetaan nyt toi et alle 2000 kertaa, mut todellisessa maailmassa tollasia rajoituksia ei ehkä kandeis olla.
+// Pyöritetään silmukkaa kunnes luku on 1
+// Otetaan nyt toi et alle 2000 kertaa, mut todellisessa maailmassa tollasia rajoituksia ei ehkä kandeis olla.
 for($r=0; $r<2000; $r++)
 {
-	# Jos luku on parillinen...
+	// Jos luku on parillinen...
 	if(is_integer($_REQUEST['n']/2))
 	{
-	# ...jaetaan se kahdella
+	// ...jaetaan se kahdella
 	$_REQUEST['n'] = $_REQUEST['n']/2;
 	$i++;
 	}
-	# Muuten luku onkin pariton..
+	// Muuten luku onkin pariton..
 	else
 	{
-	# Ja se kerrotaan kolmella ja siihen lisätään 1
+	// Ja se kerrotaan kolmella ja siihen lisätään 1
 	$_REQUEST['n'] = $_REQUEST['n']*3+1;
 	$i++;
 	}
-# Jos luku on 1 tässä vaiheessa, lopetetaan tämä silmukka
+// Jos luku on 1 tässä vaiheessa, lopetetaan tämä silmukka
 	if($_REQUEST['n'] < 2)
 	{ 
 	print $i;
